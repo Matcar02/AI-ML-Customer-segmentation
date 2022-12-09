@@ -1,6 +1,6 @@
 # Projectrepo2
  Repository Ai project
-<h1> Machine learning Project: Customer Segmentation</h1>
+<h1> Machine learning Project: Customer Segmentation</h1> 
 <h3> Group members: Carucci Matteo, Agudio Tommaso, Natoli Vittorio Alessandro </h3>
 <h2>Introduction</h2>
 <h3> In the first part of the project, we deal with a customers database where customers' orders in Brazil are registered. There are many information stored for each order, including the price spent and also some relevant information about the customer and sellers themselves; </h3>
