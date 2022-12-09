@@ -35,7 +35,9 @@ Autoencoder ANN:
 This is the last method we used, where the main goal was to reduce the dimensionality of the data using the autoencoder, a sort of Artificial Neural Network. This method works as the following:
     -The autoencoder learns a representation (encoding) for a set of data, typically for dimensionality reduction, by training the network to ignore insignificant data (“noise”).
 
-    -It has 2 main parts: an encoder that maps the message (data) to a code, and a decoder that reconstructs the message (processed data) from the code, that is the decoder extracts the most relevant patterns and information we want to retrieve. 
+    -It has 2 main parts: an encoder that maps the message (data) to a code, and a decoder that reconstructs the message (processed data) from the code, that is the decoder extracts the most relevant patterns and information we want to retrieve.
+
+![Autoencoder](Images/download.png)
 
 
 The most important step was to apply the scaling on the data, we then applied the autoencoder, got the output data (obtained after doing the epochs and encoding), and use the KMeans algorithm. After plotting the data, we observe that we obtain different results from our previous analysis, this is because the Autoencoder ANN clusters the customers using the RFM and other characteristics obtained by the ANN.
@@ -67,16 +69,29 @@ The way that the various algorithms segmented the data into these four clusters 
 Even though the silhouette score of the PCA kmeans is way less than the ones in rfm kmeans and hierarchical clustering, the algorithm has detected better segmentations, while kmeans and hierarchical have identified top customers really well. The spectral clustering instead has done a great job as one can see both in the segmentations' descriptions and also in the silhouette score, which is way less than its 2 main competitors but still decent.
 
 This result can be seen in the following dataframe:
-![Dataframe](df.jpeg)
+![Dataframe](Images/df.jpeg)
 
 
 We can also observe the following clustering for the different methods used:
+These are the clusters made by the autoencoder:
 
-![Autoencoders Plot](autoencoderplot.png)
-![Hierarchical Cluster plot](hcplot.png)
-![KMeans Plot](kmeansplot.png)
-![PCA Plot](pcaplot.png)
-![Spectral Clustering Plot](spectralplot.png)
+![Autoencoders Plot](Images/autoencoderplot.png)
+
+These are the clusters made by Hierarchical clustering:
+
+![Hierarchical Cluster plot](Images/hcplot.png)
+
+These are the clusters made by Kmeans clustering:
+
+![KMeans Plot](Images/kmeansplot.png)
+
+These are the clusters made by PCA:
+
+![PCA Plot](Images/pcaplot.png)
+
+And finally, these are the clusters made by the spectral clustering:
+
+![Spectral Clustering Plot](Images/spectralplot.png)
 
 
 
