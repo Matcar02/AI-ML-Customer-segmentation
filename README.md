@@ -67,8 +67,7 @@ The way that the various algorithms segmented the data into these four clusters 
 Even though the silhouette score of the PCA kmeans is way less than the ones in rfm kmeans and hierarchical clustering, the algorithm has detected better segmentations, while kmeans and hierarchical have identified top customers really well. The spectral clustering instead has done a great job as one can see both in the segmentations' descriptions and also in the silhouette score, which is way less than its 2 main competitors but still decent.
 
 This result can be seen in the following dataframe:
-kmeans	hierarchical clustering	   Spectral clustering	ann	     kmeansPCA
-0.816001	      0.79044	      0.34288	           0.021864    	0.149147
+![Dataframe](df.jpeg)
 
 
 We can also observe the following clustering for the different methods used:
@@ -78,6 +77,7 @@ We can also observe the following clustering for the different methods used:
 ![KMeans Plot](kmeansplot.png)
 ![PCA Plot](pcaplot.png)
 ![Spectral Clustering Plot](spectralplot.png)
+
 
 
 
