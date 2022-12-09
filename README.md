@@ -37,8 +37,6 @@ This is the last method we used, where the main goal was to reduce the dimension
 
     -It has 2 main parts: an encoder that maps the message (data) to a code, and a decoder that reconstructs the message (processed data) from the code, that is the decoder extracts the most relevant patterns and information we want to retrieve. 
 
-    The below image is a representation of the process.
-    ![autoencoders.png](attachment:download.png)
 
 The most important step was to apply the scaling on the data, we then applied the autoencoder, got the output data (obtained after doing the epochs and encoding), and use the KMeans algorithm. After plotting the data, we observe that we obtain different results from our previous analysis, this is because the Autoencoder ANN clusters the customers using the RFM and other characteristics obtained by the ANN.
 </h3>
@@ -75,11 +73,11 @@ kmeans	hierarchical clustering	   Spectral clustering	ann	     kmeansPCA
 
 We can also observe the following clustering for the different methods used:
 
-![Autoencoders Plot](attachment:autoencoderplot.png)
-![Hierarchical Cluster plot](attachment:hcplot.png)
-![KMeans Plot](attachment:kmeansplot.png)
-![PCA Plot](attachment:pcaplot.png)
-![Spectral Clustering Plot](attachment:spectralplot.png)
+![Autoencoders Plot](autoencoderplot.png)
+![Hierarchical Cluster plot](hcplot.png)
+![KMeans Plot](kmeansplot.png)
+![PCA Plot](pcaplot.png)
+![Spectral Clustering Plot](spectralplot.png)
 
 
 
