@@ -66,7 +66,24 @@ The way that the various algorithms segmented the data into these four clusters 
 4.  For the Principal Component Analysis, we can see that more high spenders have been detected compared to KMeans and HC, but when compared to Spectral, the clusters' size is similar. An interesting difference is the differentiation between those who are at-risk compared to the mid-spenders. 
 5.  Autoencoder ANN has provided very similar clusters. Not only it does not take into account the monetary value but also other features such as payment and demographics information do not seem to influence the segments.
 
-Even though the silhouette score of the PCA kmeans is way less than the ones in rfm kmeans and hierarchical clustering, the algorithm has detected better segmentations, while kmeans and hierarchical have identified top customers really well. The spectral clustering instead has done a great job as one can see both in the segmentations' descriptions and also in the silhouette score, which is way less than its 2 main competitors but still decent.</h3>
+Even though the silhouette score of the PCA kmeans is way less than the ones in rfm kmeans and hierarchical clustering, the algorithm has detected better segmentations, while kmeans and hierarchical have identified top customers really well. The spectral clustering instead has done a great job as one can see both in the segmentations' descriptions and also in the silhouette score, which is way less than its 2 main competitors but still decent.
+
+This result can be seen in the following dataframe:
+kmeans	hierarchical clustering	   Spectral clustering	ann	     kmeansPCA
+0.816001	      0.79044	      0.34288	           0.021864    	0.149147
+
+
+We can also observe the following clustering for the different methods used:
+
+![Autoencoders Plot](attachment:autoencoderplot.png)
+![Hierarchical Cluster plot](attachment:hcplot.png)
+![KMeans Plot](attachment:kmeansplot.png)
+![PCA Plot](attachment:pcaplot.png)
+![Spectral Clustering Plot](attachment:spectralplot.png)
+
+
+
+</h3>
 
 
 <h2>Conclusions</h2>
