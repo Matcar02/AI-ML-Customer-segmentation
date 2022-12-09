@@ -2,6 +2,7 @@
  Repository Ai project
 <h1> Machine learning Project: Customer Segmentation</h1> 
 <h3> Group members: Carucci Matteo, Agudio Tommaso, Natoli Vittorio Alessandro </h3>
+
 <h2>Introduction</h2>
 <h3> In the first part of the project, we deal with a customer database where customers' orders in Brazil are registered. There are many informations stored for each order, including the price spent and also some relevant information about the customer and sellers themselves; </h3>
 <h3> We then have done some data exploration to check for null values, duplicates, and useless features. </h3>
@@ -34,10 +35,10 @@ Autoencoder ANN:
 This is the last method we used, where the main goal was to reduce the dimensionality of the data using the autoencoder, a sort of Artificial Neural Network. This method works as the following:
     -The autoencoder learns a representation (encoding) for a set of data, typically for dimensionality reduction, by training the network to ignore insignificant data (“noise”).
 
-    -It has 2 main parts: an encoder that maps the message (data) to a code, and a decoder that reconstructs the message (processed data) from the code, that is the decoder extracts the most relevant patterns and information we want to retrieve. 
+    -It has 2 main parts: an encoder that maps the message (data) to a code, and a decoder that reconstructs the message (processed data) from the code, that is the decoder extracts the most relevant patterns and information we want to retrieve.
 
-    The below image is a representation of the process.
-    ![autoencoders.png](attachment:download.png)
+![Autoencoder](Images/download.png)
+
 
 The most important step was to apply the scaling on the data, we then applied the autoencoder, got the output data (obtained after doing the epochs and encoding), and use the KMeans algorithm. After plotting the data, we observe that we obtain different results from our previous analysis, this is because the Autoencoder ANN clusters the customers using the RFM and other characteristics obtained by the ANN.
 </h3>
@@ -52,5 +53,60 @@ The other way to validate the information was through the method described, whic
 </h3>
 
 <h2> Results</h2>
-<h3></h3>
+<h3>In our analysis we identified 4 main customer segmentations:
+•   Low spenders/at-risk 
+•   Mid Spenders
+•   High spenders
+•   Top customers
 
+The way that the various algorithms segmented the data into these four clusters is described as follows:
+1.  KMeans has detected the majority of the customers into a single cluster, the low spenders and those who are likely to leave the business, while the high spenders and top customers are a minority.
+2.  Hierarchical Cluster had a similar approach to KMeans, but with a key difference. Whilst the low and at-risk customers remain the same, the mid-spenders cluster size has increased, while the high and top spenders are unchanged.
+3.  Spectral Clustering has a more balanced partition, we don’t see very small segmentations as we did in KMeans and Hierarchical Cluster. We see a more even distribution of customer segmentation.
+4.  For the Principal Component Analysis, we can see that more high spenders have been detected compared to KMeans and HC, but when compared to Spectral, the clusters' size is similar. An interesting difference is the differentiation between those who are at-risk compared to the mid-spenders. 
+5.  Autoencoder ANN has provided very similar clusters. Not only it does not take into account the monetary value but also other features such as payment and demographics information do not seem to influence the segments.
+
+Even though the silhouette score of the PCA kmeans is way less than the ones in rfm kmeans and hierarchical clustering, the algorithm has detected better segmentations, while kmeans and hierarchical have identified top customers really well. The spectral clustering instead has done a great job as one can see both in the segmentations' descriptions and also in the silhouette score, which is way less than its 2 main competitors but still decent.
+
+This result can be seen in the following dataframe:
+![Dataframe](Images/df.jpeg)
+
+
+We can also observe the following clustering for the different methods used:
+These are the clusters made by the autoencoder:
+
+![Autoencoders Plot](Images/autoencoderplot.png)
+
+These are the clusters made by Hierarchical clustering:
+
+![Hierarchical Cluster plot](Images/hcplot.png)
+
+These are the clusters made by Kmeans clustering:
+
+![KMeans Plot](Images/kmeansplot.png)
+
+These are the clusters made by PCA:
+
+![PCA Plot](Images/pcaplot.png)
+
+And finally, these are the clusters made by the spectral clustering:
+
+![Spectral Clustering Plot](Images/spectralplot.png)
+
+
+
+
+</h3>
+
+
+<h2>Conclusions</h2>
+<h3>After a thorough investigation, there are some takeaways that the Brazilian subsidiary can get:
+- Brazilian customers are segmented into 4 categories, low-spenders, at-risk customers, mid-spenders, and finally top and high-spenders customers.
+
+- The subsidiary should focus the email campaign on both low and at-risk customers to retain them, by proposing promotions and discounts to those returning/continuing to buy in the business.
+
+- For mid-spenders, the firm should introduce new and less-bought products. As we have seen there are products that have been purchased way more than others and it can be useful to increase sales in those who are not purchased as much.
+
+- For high and top spenders, the firm could as well promote the usual products they buy, but at the same time propose more general-user products to increase the already large Lifetime value they have.</h3>
+
+<h3>Even though our analysis may be satisfactory, there is still something missing. Ideally, some further information on the customers could have helped us create a better segmentation, for example, the annual income. This is because some data that was in the dataset wasn't significant in our analysis, for example, most if not all of the orders, were done in two states such as Sao Paolo and Rio de Janeiro. The next steps would be to obtain more information regarding the customers to then create a better segmentation.</h3>
